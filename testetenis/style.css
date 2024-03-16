@@ -1,0 +1,115 @@
+@charset "utf-8";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@keyframes rotate-backwards {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+
+body {
+  text-align: center;
+  font-size: 2em;
+  background-color: rgba(255, 255, 255, 0.658);
+  
+}
+
+header {
+ background-color: lightgray;
+ height: 200px;
+
+ display: flex;
+ justify-content: flex-start;
+ align-items:flex-end;
+}
+
+main {
+ margin: auto;
+ display: flex;
+ justify-content: center ;
+ align-items: center;
+ 
+}
+
+
+ul {
+  padding-bottom:5px;
+}
+
+li{
+  font-size: 30px;
+  border: 1px solid black;
+display: inline-block;
+
+}
+.container {
+
+width: 900px;
+height: 100vh;
+
+background-color: rgb(110, 104, 167);
+border-radius: 5px;
+
+
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+justify-content: space-around;
+margin: 0px;
+
+
+
+
+}
+  .container > div  {
+    width:150px;
+    height: 150px;
+  border: 1px solid black;
+  cursor: pointer;
+
+ 
+}
+.container > :hover {
+  animation: rotate-backwards 0.8s linear; 
+}
+
+img {
+ 
+  width: 150px;
+  height: 150px;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  border: 1px solid darkred;
+}
+
+a {
+  background-color: rgb(8, 184, 8);
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  transition: 0.3s;
+  background-color: rgb(6, 83, 6);
+  text-decoration: none;
+  color: black;
+}
+
+footer
+{ 
+
+  height: 50px;
+  background-color: darkblue;
+ 
+}

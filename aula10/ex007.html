@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font: normal 18pt arial;
+    }
+    input {
+        font: normal 18pt arial;
+        width: 100px;
+    }
+    #res {
+        margin-top: 24px;
+    }
+</style>
+
+<body>
+    <h1>somando valores</h1>
+
+    <input type="number" id="txtn1"> <!--Criando input do tipo texto-->
+    +
+    <input type="number" id="txtn2"> <!--Criando input do tipo texto-->
+
+    <input type="button" value="somar" onclick="somar()"> <!--Criando input do tipo button e atribuindo a ele onclick="somar()"-->
+    <div id="res">Resultado</div>  <!--Criando uma div com o id 'res' (para mostrar o resultado)-->
+
+
+    <script>
+        function somar(){                                        //criando uma função para realizar a soma
+            var tn1 = document.getElementById('txtn1')          //criando uma variavel 'tn1' que vai pegar o id do <ipunt> 'txtn1' 
+            var tn2 = document.querySelector('input#txtn2')    //criando uma variavel 'tn2' que vai pegar o id do <ipunt> 'txtn2' 
+            var res = document.getElementById('res')          //criando uma variavel 'res' que vai pegar o id da <div> 'res' 
+            var n1 = Number(tn1.value)                       //criando uma variavel 'n1' que vai pegar o valor do tn1 e trasnformar pra Number  
+            var n2 = Number(tn2.value)                      //criando uma variavel 'n2' que vai pegar o valor do tn2 e trasnformar pra Number
+            var s = n1 + n2                                //criando uma variavel 's' que vai pegar o valor do n1 e somar com o n2
+            res.innerHTML = `a soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>` //mostrando a resposta
+        }
+    </script>
+</body>
+</html>

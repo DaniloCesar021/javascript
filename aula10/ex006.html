@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+<style>
+    #area {
+        font: normal 40px arial;
+        background-color: rgb(84, 204, 84);
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div id="area" >  
+        interaja...
+    </div>
+
+
+    <script>
+   var a = window.document.getElementById('area')        // criando uma variavel 'a' pegando por id 'area'
+   a.addEventListener('click', clicar)                   // adicionando uma ação 'click' ao 'clicar'
+   a.addEventListener('mouseenter', entrar)             // adicionando uma ação 'mouseenter' ao 'entrar'
+   a.addEventListener('mouseout', sair)                 // adicionando uma ação 'mouseout' ao 'sair'
+
+
+        function clicar() {                              //função clicar
+             
+             a.innerText = 'clicou'                  // ao clicar a div vai mostrar 'clicou'
+             a.style.background = 'darkred'         // ao clicar a div vai alterar a cor do background para 'darkred'
+        
+            
+        }
+        function entrar(){                          //função entrar
+           
+            a.innerText = 'entrou'               // ao entrar a div vai mostrar 'entrou'
+            a.style.background = 'purple'       // ao entrar a div vai alterar a cor do background para 'purple'
+        } 
+        function sair(){                      //função sair
+           
+            a.innerText = 'saiu'             // ao sair a div vai mostrar 'saiu' 
+            a.style.background = 'green'    // ao sair a div vai alterar a cor do background para 'green'
+        }
+       
+
+    </script>
+</body>
+</html>
