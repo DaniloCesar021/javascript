@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+Velocidade do carro<input type="text" name="" id="ipv">Km/h
+<input type="button" value="Calcular" onclick="calc()">
+<div id="res"></div>
+
+<script>
+    function calc(){
+        var  inpv = document.getElementById('ipv')
+        var res = document.getElementById('res')
+        var vel = Number(inpv.value)
+        res.innerHTML = `<p> sua velocidade é de  <strong>${vel}</strong> </p>`
+        if (vel > 60) {
+            
+            res.innerHTML += '<p>vc foi multado</p>'
+        } else {
+            res.innerHTML +='<p>vc esta livre de multas</p>'
+        }
+    }
+</script>
+</body>
+</html>
