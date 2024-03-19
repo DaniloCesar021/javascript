@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-
-<div class="container" >
-    <h1>Multas</h1>
-    Velocidade do carro <input type="text" name="" id="ipx" > km/h
-    <input type="button" value="calcular" onclick="calcular()" >
+    Velocidade do carro <input type="text" id="ip">Km/h
+    <input type="button" value="calcular" onclick="cal()">
     <div id="res"></div>
-    
-</div>
-<script>
-function calcular(){
-    var inpx = document.getElementById('ipx')
-    var res = document.getElementById('res')
-    var vel = (inpx.value)
-    res.innerHTML = ` sua velocidade é de <strong>${vel} </strong>Km/h`
-    if(vel > 60 ) {
-        res.innerHTML += `<p>voce foi MULTADO!</p>`
-    } else {
-        res.innerHTML += `<p>voce esta livre de  multas!</p>`
-    }
-}
 
-</script>
+
+
+    <script>
+        function cal() {
+            var ip1 = document.getElementById('ip')
+            var res = document.getElementById('res')
+            var vel = Number(ip1.value)
+            res.innerHTML = `<p>sua velocidade é de: <strong> ${vel} km/h</strong></p>`
+            if (vel > 60) {
+                res.innerHTML += `<p><strong>VC FOI MULTADO</strong></p>` 
+            } else {
+            res.innerHTML += `<p>vc esta livre de multas</p>` }
+
+        }
+
+
+
+
+    </script>
 </body>
 </html>
