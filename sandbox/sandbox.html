@@ -8,22 +8,25 @@
 </head>
 <body>
 
-
-    Velocidade em<input type="text" id="ip1">Km/h
-    <input type="button" value="enviar" onclick="calc()">
+<div class="container" >
+    <h1>Multas</h1>
+    Velocidade do carro <input type="text" name="" id="ipx" > km/h
+    <input type="button" value="calcular" onclick="calcular()" >
     <div id="res"></div>
+    
+</div>
 <script>
-    function calc() {
-        var inpt1 = document.getElementById('ip1')
-        var res = document.getElementById('res')
-        var vel = Number(inpt1.value)
-        res.innerHTML = `A velocidade é de <strong>${vel}</strong>km/h ` 
-        if ( vel > 60) {
-            res.innerHTML += ` <p>Vc tomou uma multa por excesso de velocidade</p>`
-        } else {
-            res.innerHTML += `<p>vc esta isento de multas</p>`
-        }
+function calcular(){
+    var inpx = document.getElementById('ipx')
+    var res = document.getElementById('res')
+    var vel = (inpx.value)
+    res.innerHTML = ` sua velocidade é de <strong>${vel} </strong>Km/h`
+    if(vel > 60 ) {
+        res.innerHTML += `<p>voce foi MULTADO!</p>`
+    } else {
+        res.innerHTML += `<p>voce esta livre de  multas!</p>`
     }
+}
 
 </script>
 </body>
