@@ -8,7 +8,33 @@
 </head>
 <body>
 
+<div class="container">
+    Digite sua idade: <input type="text" id="id1" placeholder="0">
+    <input type="button" value="entrar" onclick="idad()">
+    <div id="res"></div>
+</div>
 
+
+<script>
+function idad(){
+
+    var idad1 = document.getElementById('id1')
+    var res = document.getElementById('res')
+    var idade = Number(idad1.value)
+    res.innerHTML = `<p>sua idade é de <strong>${idade}</strong></p>` 
+   if (idade < 16) {
+    res.innerHTML += `<p>não vota</p>` 
+   } 
+   else if (idade < 18 || idade > 65 ) {
+    res.innerHTML += `<p>Voto opcional</p>` 
+   } 
+   else {
+    res.innerHTML += `<p>Voto obrigatorio</p>` 
+   }
+
+}
+
+</script>
 
 </body>
 </html>
